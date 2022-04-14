@@ -1,7 +1,3 @@
-from ctypes.wintypes import tagRECT
-from lib2to3.pgen2 import driver
-from pyexpat import model
-from sklearn.compose import TransformedTargetRegressor
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -14,7 +10,7 @@ This app predicts the **Automobile Price**!
 """)
 st.write('---')
 
-# Loads the Boston House Price Dataset
+# Loads the Automobile Dataset
 df = pd.read_csv("automobile-cleans.csv") 
 df=df.dropna()
 X = pd.DataFrame(df, columns=("wheelbase","horsepower","length","width","curbweight","enginesize","bore","citympg","highwaympg","stroke"))
